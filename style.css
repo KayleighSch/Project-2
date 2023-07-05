@@ -32,18 +32,35 @@ ul li {
     line-height: 100px;
 }
 
-ul li a {
+ul li h1 a {
+    padding-top: 10px;
+    font-size: 60px;
+    font-weight: 700;
+    color:rgb(6, 92, 104);
     display: block;
     text-decoration: none;
-    font-size: 20px;
-    font-weight: 700;
-    color: #1e1e1e;
     padding: 0 30px;
 }
 
-ul li a:hover {
-    color: purple;
+ul li a {
+    padding-top: 10px;
+    font-size: 40px;
+    font-weight: 500;
+    color:rgb(6, 92, 104);
+    display: block;
+    text-decoration: none;
+    margin-right: 300px;
 }
+
+ul li a:hover {
+    color: darkgrey;
+}
+
+/* Content section styles*/
+.content {
+    padding: 100px 0;
+    min-height: calc(100vh - 200px);
+  }
 
   /* Footer styles*/
   #footer {
