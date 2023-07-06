@@ -57,3 +57,34 @@ var quizData = [
 
 var currentQuestion = 0;
 var score = 0;
+
+// Display questions and options
+function loadQuestion() {
+  var questionElement = document.getElementById("question");
+  var optionsElement = document.getElementById("options");
+  var submitBtn = document.getElementById("submit-btn");
+
+  var questionNumber = currentQuestion + 1;
+  var questionText = "Q" + questionNumber + ": What is the capital of " + quizData[currentQuestion].country + "?";
+  questionElement.innerHTML = questionText;
+
+  optionsElement.innerHTML = "";
+  for (var i = 0; i < quizData[currentQuestion].options.length; i++) {
+    var option = document.createElement("div");
+    option.classList.add("form-check");
+    option.innerHTML = `
+      <input class="form-check-input" type="radio" name="option" id="option-${i}" value="${i}">
+      <label class="form-check-label" for="option-${i}">
+        ${quizData[currentQuestion].options[i]}
+      </label>
+    `;
+    optionsElement.appendChild(option);
+  }
+
+  submitBtn.style.display = "block";
+  if (currentQuestion === quizData.length - 1) {
+    submitBtn.innerText = "Submit";
+  } else {
+    submitBtn.innerText = "Next";
+  }
+}
