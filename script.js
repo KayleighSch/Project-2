@@ -88,3 +88,17 @@ function loadQuestion() {
     submitBtn.innerText = "Next";
   }
 }
+
+function checkAnswer(selectedIndex) {
+  if (selectedIndex === quizData[currentQuestion].answer) {
+    score++;
+  }
+
+  currentQuestion++;
+  if (currentQuestion < quizData.length) {
+    loadQuestion();
+  } else {
+    showResult();
+  }
+}
+
