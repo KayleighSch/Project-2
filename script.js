@@ -114,3 +114,9 @@ function submitAnswer() {
     checkAnswer(selectedIndex);
   }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  loadQuestion();
+
+  document.getElementById("submit-btn").addEventListener("click", submitAnswer);
+    });
