@@ -102,3 +102,7 @@ function checkAnswer(selectedIndex) {
   }
 }
 
+function showResult() {
+  var quizContainer = document.getElementById("quiz-container");
+  quizContainer.innerHTML = "<h2>Quiz completed!</h2><p>Your score: " + score + "/" + quizData.length + "</p>";
+}
