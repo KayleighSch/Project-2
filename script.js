@@ -52,3 +52,8 @@ var quizData = [
       answer: 2
     },
 ];
+
+// Quiz Variables
+
+var currentQuestion = 0;
+var score = 0;
