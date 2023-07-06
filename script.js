@@ -106,3 +106,11 @@ function showResult() {
   var quizContainer = document.getElementById("quiz-container");
   quizContainer.innerHTML = "<h2>Quiz completed!</h2><p>Your score: " + score + "/" + quizData.length + "</p>";
 }
+
+function submitAnswer() {
+  var selectedOption = document.querySelector('input[name="option"]:checked');
+  if (selectedOption) {
+    var selectedIndex = parseInt(selectedOption.value);
+    checkAnswer(selectedIndex);
+  }
+}
